@@ -4,5 +4,5 @@
 
 #### Chapter 2
 
-* [1.1.](/MOOC_k8sExerciseSubmissions/Log%20Output/README.md)
+* [1.1.](/Log%20Output/README.md)
 
