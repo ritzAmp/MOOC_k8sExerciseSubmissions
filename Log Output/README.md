@@ -1,6 +1,6 @@
 ### Build the docker image from the Dockerfile
 `docker build -t ritzamp/random-string-generator .`  
-    Docker image can be found [here](/https://hub.docker.com/repository/docker/ritzamp/random-string-generator/general)   
+    Docker image can be found [here](https://hub.docker.com/repository/docker/ritzamp/random-string-generator/general)   
   
 ### Create cluster  
 `k3d cluster create -a 2`   
