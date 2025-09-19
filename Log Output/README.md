@@ -1,3 +1,5 @@
+# Exercise 1.1
+
 ### Build the docker image from the Dockerfile
 `docker build -t ritzamp/random-string-generator .`  
     Docker image can be found [here](https://hub.docker.com/repository/docker/ritzamp/random-string-generator/general)   
