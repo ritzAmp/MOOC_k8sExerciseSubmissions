@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
         - name: logoutput
-          image: ritzamp/random-string-generator
+          image: ritzamp/random-string-generator:latest
