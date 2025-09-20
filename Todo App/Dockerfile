@@ -4,15 +4,14 @@ FROM node:18-alpine
 # Set working directory
 WORKDIR /usr/src/app
 
-# Copy package.json and install dependencies
-COPY package.json ./
-RUN npm install --production
+# Copy dependency files first
+COPY package*.json ./
+
+# Install deps using lockfile for reproducible builds
+RUN npm ci --only=production
 
 # Copy source code
 COPY . .
-
-# Expose port (default: 8080, but can be overridden by ENV PORT)
-EXPOSE 8080
 
 # Start app
 CMD ["npm", "start"]
