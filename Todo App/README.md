@@ -1,21 +1,17 @@
-# Exercise 1.2
+# Exercise 1.4
 
-### Build the docker image from the Dockerfile and publish it to docker hub
-`docker build -t ritzamp/todoapp:1.2 . --push`   
-    Docker image is available[here](https://hub.docker.com/repository/docker/ritzamp/todoapp/general)   
-  
 ### Create cluster  
 `k3d cluster create -a 2`   
 
-### Create deployment  
-`kubectl create deployment port-output --image=ritzamp/todoapp:1.2`  
+### Create deployment using the deployment files from remote location 
+`kubectl apply -f https://raw.githubusercontent.com/ritzAmp/MOOC_k8sExerciseSubmissions/refs/heads/main/Todo%20App/manifests/deployment.yaml`   
 
 ### Get pod name  
 `kubectl get pods`  
-  In this instance the pod name is *port-output-7c69dc8c79-rl24x*   
+  In this instance the pod name is *todoapp-dep-58dc4d695-mzbjx*   
   
 ### See the output  
-`kubectl logs port-output-7c69dc8c79-rl24x`  
+`kubectl logs todoapp-dep-58dc4d695-mzbjx`  
 
 Output    
 ```
